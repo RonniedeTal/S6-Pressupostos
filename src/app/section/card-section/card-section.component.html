@@ -22,6 +22,13 @@
         <span>{{budgetService.pageCounters['Seo']}}</span>
         <button (click)="budgetService.plusPages('Seo')" class="btn btn-light rounded-circle"> <fa-icon [icon]="faplus" class="fa-xs fa-beat-fade" ></fa-icon></button>
       </div>
+      <hr>
+      <div>
+        <p class="fw-bold">Number of languages</p>
+        <button (click)="budgetService.minusLanguages('Seo')" class="btn btn-light rounded-circle"><fa-icon [icon]="faminus "  class="fa-xs"></fa-icon></button>
+        <span>{{budgetService.languagesCounters['Seo']}}</span>
+        <button (click)="budgetService.plusLanguages('Seo')" class="btn btn-light rounded-circle"> <fa-icon [icon]="faplus" class="fa-xs fa-beat-fade" ></fa-icon></button>
+      </div>
     </app-card>
   </div>
 
@@ -47,6 +54,13 @@
         <button (click)="budgetService.minusPages('Ads')" class="btn btn-light rounded-circle"><fa-icon [icon]="faminus "  class="fa-xs"></fa-icon></button>
         <span>{{budgetService.pageCounters['Ads']}}</span>
         <button (click)="budgetService.plusPages('Ads')" class="btn btn-light rounded-circle"> <fa-icon [icon]="faplus" class="fa-xs fa-beat-fade" ></fa-icon></button>
+      </div>
+      <br>
+      <div>
+        <p class="fw-bold">Number of languages</p>
+        <button (click)="budgetService.minusLanguages('Ads')" class="btn btn-light rounded-circle"><fa-icon [icon]="faminus "  class="fa-xs"></fa-icon></button>
+        <span>{{budgetService.languagesCounters['Ads']}}</span>
+        <button (click)="budgetService.plusLanguages('Ads')" class="btn btn-light rounded-circle"><fa-icon [icon]="faplus "  class="fa-xs"></fa-icon></button>
       </div>
     </app-card>
   </div>
@@ -74,7 +88,13 @@
         <span>{{budgetService.pageCounters['Web']}}</span>
         <button (click)="budgetService.plusPages('Web')" class="btn btn-light rounded-circle"> <fa-icon [icon]="faplus" class="fa-xs fa-beat-fade" ></fa-icon></button>
       </div>
-    
+    <br>
+    <div>
+        <p class="fw-bold">Number of languages</p>
+        <button (click)="budgetService.minusLanguages('Web')" class="btn btn-light rounded-circle"> <fa-icon [icon]="faminus" class="fa-xs fa-beat-fade" ></fa-icon></button>
+        <span>{{budgetService.languagesCounters['Web']}}</span>
+        <button (click)="budgetService.plusLanguages('Web')" class="btn btn-light rounded-circle"> <fa-icon [icon]="faplus" class="fa-xs fa-beat-fade" ></fa-icon></button>
+    </div>
     </app-card>
   </div>
   <div class="total mt-5 mx-5">
