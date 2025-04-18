@@ -1,4 +1,9 @@
-*{
-    padding: auto;
-    margin: auto;
+
+.card{
+    max-width: 800px;
+    border-radius: 12px;
 }
+
+.price {
+  
+  }

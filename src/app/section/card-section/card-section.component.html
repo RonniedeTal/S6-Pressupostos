@@ -1,24 +1,64 @@
 <div class="card-section">
-    <div class="card1">
-    <app-card [h4Content]="'Seo'"
-    [pContent]="'programming a entire responsive web'"
-    [priceContent]='300'>
-        
+  <div class="card1 mt-5">
+    <app-card
+      [h4Content]="'Seo'"
+      [pContent]="'programming a entire responsive web'"
+      [priceContent]="300"
+    >
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="service"
+          id="seo"
+          [(ngModel)]="selectedService"
+          [value]="'Seo'"
+        />
+        <label class="form-check-label" for="seo">Add</label>
+      </div>
     </app-card>
-</div>
-<div class="card2">
-    <app-card [h4Content]="'Ads'"
-    [pContent]="'programming a entire responsive web'"
-    [priceContent]='400'>
-        
-    </app-card>
-</div>
-<div class="card3">
-    <app-card [h4Content]="'Web'"
-    [pContent]="'programming a entire responsive web'"
-    [priceContent]='500'>
-        
-    </app-card>
-</div>
-</div>
+  </div>
 
+  <div class="card2">
+    <app-card
+      [h4Content]="'Ads'"
+      [pContent]="'programming a entire responsive web'"
+      [priceContent]="400"
+    >
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="service"
+          id="ads"
+          [(ngModel)]="selectedService"
+          [value]="'Ads'"
+        />
+        <label class="form-check-label" for="ads">Add</label>
+      </div>
+    </app-card>
+  </div>
+
+  <div class="card3">
+    <app-card
+      [h4Content]="'Web'"
+      [pContent]="'programming an entire responsive web'"
+      [priceContent]="500"
+    >
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="service"
+          id="web"
+          [(ngModel)]="selectedService"
+          [value]="'Web'"
+        />
+        <label class="form-check-label" for="web">Add</label>
+      </div>
+    </app-card>
+  </div>
+  <div class="total mt-5 mx-5">
+    <h4 class="fw-bold ">Proposed Price:</h4>
+  </div>
+</div>
