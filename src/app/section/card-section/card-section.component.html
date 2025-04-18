@@ -16,6 +16,12 @@
         />
         <label class="form-check-label" for="seo">Add</label>
       </div>
+      <div>
+        <p class="fw-bold">Number of pages</p>
+        <button (click)="budgetService.minusPages('Seo')" class="btn btn-light rounded-circle"><fa-icon [icon]="faminus "  class="fa-xs"></fa-icon></button>
+        <span>{{budgetService.pageCounters['Seo']}}</span>
+        <button (click)="budgetService.plusPages('Seo')" class="btn btn-light rounded-circle"> <fa-icon [icon]="faplus" class="fa-xs fa-beat-fade" ></fa-icon></button>
+      </div>
     </app-card>
   </div>
 
@@ -35,6 +41,12 @@
           [value]="'Ads'"
         />
         <label class="form-check-label" for="ads">Add</label>
+      </div>
+      <div>
+        <p class="fw-bold">Number of pages</p>
+        <button (click)="budgetService.minusPages('Ads')" class="btn btn-light rounded-circle"><fa-icon [icon]="faminus "  class="fa-xs"></fa-icon></button>
+        <span>{{budgetService.pageCounters['Ads']}}</span>
+        <button (click)="budgetService.plusPages('Ads')" class="btn btn-light rounded-circle"> <fa-icon [icon]="faplus" class="fa-xs fa-beat-fade" ></fa-icon></button>
       </div>
     </app-card>
   </div>
@@ -56,6 +68,13 @@
         />
         <label class="form-check-label" for="web">Add</label>
       </div>
+      <div>
+        <p class="fw-bold">Number of pages</p>
+        <button (click)="budgetService.minusPages('Web')" class="btn btn-light rounded-circle"><fa-icon [icon]="faminus "  class="fa-xs"></fa-icon></button>
+        <span>{{budgetService.pageCounters['Web']}}</span>
+        <button (click)="budgetService.plusPages('Web')" class="btn btn-light rounded-circle"> <fa-icon [icon]="faplus" class="fa-xs fa-beat-fade" ></fa-icon></button>
+      </div>
+    
     </app-card>
   </div>
   <div class="total mt-5 mx-5">
