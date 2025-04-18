@@ -4,13 +4,14 @@ import {FormsModule} from '@angular/forms'
 import { BudgetService } from '../../services/budget.service';
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-card-section',
   standalone:true,
-  imports: [CardComponent, FormsModule, FontAwesomeModule],
+  imports: [CardComponent, FormsModule, FontAwesomeModule, CommonModule],
   templateUrl: './card-section.component.html',
-  styleUrl: './card-section.component.css'
+  styleUrls: ['./card-section.component.css']
 })
 export class CardSectionComponent implements OnInit{
 

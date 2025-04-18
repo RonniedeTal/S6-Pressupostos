@@ -2,8 +2,12 @@
     margin: auto;
     padding: auto;
 }
+.card1{
+    position: relative;
+}
 
 .total{
-    
+
     text-align: end;
 }
+
