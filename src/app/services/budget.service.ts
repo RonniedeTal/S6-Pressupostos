@@ -1,12 +1,15 @@
 import { Injectable } from "@angular/core";
+
+
 @Injectable({
     providedIn:'root',
 })
+
 export class BudgetService {
   pageCounters: { [key: string]: number } = {
-    Seo: 0,
-    Ads: 0,
-    Web: 0
+    Seo: 1,
+    Ads: 1,
+    Web: 1
   };
 
   plusPages(service: string) {
@@ -26,9 +29,9 @@ export class BudgetService {
   }
 
   languagesCounters:{[key:string]:number}={
-    Seo: 0,
-    Ads: 0,
-    Web: 0
+    Seo: 1,
+    Ads: 1,
+    Web: 1
   };
   plusLanguages(service:string){
     if(this.languagesCounters[service]<10)
@@ -42,6 +45,14 @@ export class BudgetService {
   }
 
   getLanguageCount(service: string): number {
+   
+    
     return this.languagesCounters[service];
   }
+  
+
+  budgetCalculator(service:string):number{
+    return (this.getLanguageCount(service)-1+this.getPageCount(service)-1)*30
+  }
+
 }
