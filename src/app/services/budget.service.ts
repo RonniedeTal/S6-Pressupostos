@@ -1,4 +1,5 @@
-import { Injectable } from "@angular/core";
+import { Injectable, signal } from "@angular/core";
+import { UserInterface } from "../interfaces/user-interface";
 
 
 @Injectable({
@@ -6,6 +7,8 @@ import { Injectable } from "@angular/core";
 })
 
 export class BudgetService {
+  users=signal<UserInterface []>([])
+  // users=signal<UserInterface []>([])
   pageCounters: { [key: string]: number } = {
     Seo: 1,
     Ads: 1,
@@ -44,16 +47,32 @@ export class BudgetService {
     }
   }
 
-  getLanguageCount(service: string): number {
+  // getLanguageCount(service: string): number {
+  //  console.log(this.languagesCounters[service], this.languagesCounters['key:String']);
    
     
-    return this.languagesCounters[service];
+  //   return this.languagesCounters[service];
+  // }
+  getLanguageCount(service: string): number {
+    return  this.languagesCounters[service] || 0;
+    
+   
+   
   }
+ 
+  getService(service: string): { serviceName: string; languages: number; pages: number } {
+    const languages = this.getLanguageCount(service);
+    const pages = this.getPageCount(service);
   
-
+    return {
+      serviceName: service,
+      languages: languages,
+      pages: pages
+    };
+  }
   budgetCalculator(service:string):number{
     return (this.getLanguageCount(service)-1+this.getPageCount(service)-1)*30
   }
 
-  
+ 
 }
