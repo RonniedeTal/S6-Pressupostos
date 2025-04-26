@@ -55,4 +55,5 @@ export class BudgetService {
     return (this.getLanguageCount(service)-1+this.getPageCount(service)-1)*30
   }
 
+  
 }

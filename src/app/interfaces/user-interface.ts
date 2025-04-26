@@ -1,5 +1,10 @@
 export interface UserInterface {
     name:string,
     telephone:string,
-    email:string
+    email:string,
+    budget:number,
+    service:{
+        languages:number,
+        pages:number
+    }[]
 }

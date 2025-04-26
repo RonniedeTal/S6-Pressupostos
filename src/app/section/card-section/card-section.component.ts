@@ -9,11 +9,12 @@ import { AlertifyService } from '../../services/alertify.service';
 import { faQuestion } from '@fortawesome/free-solid-svg-icons';
 import { faInfo } from '@fortawesome/free-solid-svg-icons';
 import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
+import { AddUserComponent } from "../../components/add-user/add-user.component";
 
 @Component({
   selector: 'app-card-section',
   standalone:true,
-  imports: [CardComponent, FormsModule, FontAwesomeModule, CommonModule],
+  imports: [CardComponent, FormsModule, FontAwesomeModule, CommonModule, AddUserComponent],
   templateUrl: './card-section.component.html',
   styleUrls: ['./card-section.component.css']
 })
@@ -23,19 +24,7 @@ total: any;
   constructor(public budgetService:BudgetService,
     public alertifyService:AlertifyService
   ){}
-  // counter:number=0
-  //aqui añado las operaciones
-  // plusPages(){
-  //   this.counter++
-  // }
-  // minusPages(){
-  //   if(this.counter>0){
-  //     this.counter--
-  //   }else{
-  //     this.counter=0
-  //   }
-    
-  // }
+  
  
 selectedService: string = ''
 isChecked=false;
@@ -44,6 +33,7 @@ faminus=faMinus
 faQuestion=faQuestion
 faInfo=faInfo
 faCircleInfo=faCircleInfo
+
 checkBoxToggle(){
   this.isChecked = !this.isChecked
 }
@@ -60,6 +50,7 @@ getServiceValue():number{
   const actualValue= this.servicePrices[this.selectedService]||0
   const extraService= this.budgetService.budgetCalculator(this.selectedService)
   return actualValue+extraService
+  
 }
 
 languageInfo():void{
@@ -72,4 +63,6 @@ pagesInfo():void{
     "choose the number of pages  of your project. every language cost is 30€"  
    )
 }
+
+
 }

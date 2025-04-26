@@ -1,6 +1,7 @@
-
 .card{
+    
+    margin: auto;
+    padding-right:auto;
     max-width: 800px;
     border-radius: 12px;
 }
-

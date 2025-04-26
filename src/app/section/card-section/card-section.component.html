@@ -93,5 +93,7 @@
   </div>
   <div class="total mt-5 mx-5">
     <h4 class="fw-bold ">Proposed Price: {{getServiceValue()}}€</h4>
+    
   </div>
+  <app-add-user [getServiceValue]="getServiceValue.bind(this)"></app-add-user>
 </div>
