@@ -6,15 +6,15 @@
     <input
       type="text"
       class="form-control w-auto d-inline me-3"
-      placeholder="Buscar por nombre o email"
+      placeholder="find by name or email"
       (input)="onSearch($event)"
     />
   
     
     <select (change)="changeSortCriteria($event)" class="form-select w-auto d-inline">
-      <option value="date">Ordenar por Fecha</option>
-      <option value="price">Ordenar por Precio</option>
-      <option value="alphabetical">Ordenar por Nombre</option>
+      <option value="date">Sort by date</option>
+      <option value="price">Sort by price</option>
+      <option value="alphabetical">Sort by name</option>
     </select>
   </section>
   
@@ -35,7 +35,7 @@
               <ul class="mb-0 ps-3">
                 @for (service of user.service; track $index) {
                   <li>
-                    {{service.serviceName}} ({{service.languages}} idiomas, {{service.pages}} páginas)
+                    {{service.serviceName}} ({{service.languages}} languages, {{service.pages}} pages)
                   </li>
                 }
               </ul>
