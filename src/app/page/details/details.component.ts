@@ -17,7 +17,7 @@ export class DetailsComponent {
   constructor(private route: ActivatedRoute, private userService: UserService) {
     const paramId = this.route.snapshot.params['id'];
     this.user = this.userService.getId(paramId);
-    console.log('paramId:', paramId);
-    console.log('user:', this.user);
+    // console.log('paramId:', paramId);
+    // console.log('user:', this.user);
   }
 }

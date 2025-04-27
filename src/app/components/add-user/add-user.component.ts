@@ -56,7 +56,7 @@ export class AddUserComponent {
       this.userService.setUser(user);
     }
 
-    console.log(user);
+    // console.log(user);
     this.formInput.reset({
       name: '',
       telephone: '',
