@@ -10,7 +10,7 @@
 
   <select
     (change)="changeSortCriteria($event)"
-    class="form-select w-auto d-inline"
+    class="add form-select w-auto d-inline"
   >
     <option value="date">Sort by date</option>
     <option value="price">Sort by price</option>
@@ -18,14 +18,14 @@
   </select>
 </section>
 
-<section>
+<section >
   <ul class="list-unstyled">
     @for (user of filteredUsers(); track $index) {
     <li
       class="card mt-3 shadow p-4 mb-4 bg-body rounded"
       [routerLink]="['/details', user.id]"
     >
-      <div class="d-flex justify-content-between align-items-center flex-wrap">
+      <div class="add d-flex justify-content-between align-items-center flex-wrap">
         <div>
           <h4 class="mb-1">{{ user.name }}</h4>
           <p class="mb-1">{{ user.email }}</p>

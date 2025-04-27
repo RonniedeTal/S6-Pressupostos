@@ -9,3 +9,7 @@
 .total {
   text-align: end;
 }
+
+.add{
+    cursor: pointer
+}

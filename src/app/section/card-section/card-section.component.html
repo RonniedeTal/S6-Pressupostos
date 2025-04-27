@@ -7,14 +7,14 @@
     >
       <div class="form-check">
         <input
-          class="form-check-input"
+          class="add form-check-input"
           type="radio"
           name="service"
           id="seo"
           [(ngModel)]="selectedService"
           [value]="'Seo'"
         />
-        <label class="form-check-label fa-beat-fade" for="seo">Add</label>
+        <label class="add form-check-label fa-beat-fade" for="seo">Add</label>
       </div>
       <div *ngIf="selectedService === 'Seo'" class="displays">
         <p class="fw-bold">
@@ -64,14 +64,14 @@
     >
       <div class="form-check">
         <input
-          class="form-check-input"
+          class="add form-check-input"
           type="radio"
           name="service"
           id="ads"
           [(ngModel)]="selectedService"
           [value]="'Ads'"
         />
-        <label class="form-check-label fa-beat-fade" for="ads">Add</label>
+        <label class="add form-check-label fa-beat-fade" for="ads">Add</label>
       </div>
       <div *ngIf="selectedService === 'Ads'">
         <p class="fw-bold">
@@ -121,14 +121,14 @@
     >
       <div class="form-check">
         <input
-          class="form-check-input"
+          class="add form-check-input"
           type="radio"
           name="service"
           id="web"
           [(ngModel)]="selectedService"
           [value]="'Web'"
         />
-        <label class="form-check-label fa-beat-fade" for="web">Add</label>
+        <label class="add form-check-label fa-beat-fade" for="web">Add</label>
       </div>
       <div *ngIf="selectedService === 'Web'">
         <p class="fw-bold">
