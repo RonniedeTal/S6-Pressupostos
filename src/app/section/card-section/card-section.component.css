@@ -1,13 +1,11 @@
-.card-section{
-    margin: auto;
-    padding: auto;
+.card-section {
+  margin: auto;
+  padding: auto;
 }
-.card1{
-    position: relative;
-}
-
-.total{
-
-    text-align: end;
+.card1 {
+  position: relative;
 }
 
+.total {
+  text-align: end;
+}

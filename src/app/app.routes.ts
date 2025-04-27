@@ -3,18 +3,17 @@ import { HomeComponent } from './page/home/home.component';
 import { DetailsComponent } from './page/details/details.component';
 
 export const routes: Routes = [
-    {
-        path:'home',
-        component:HomeComponent
-    },
+  {
+    path: '',
+    component: HomeComponent,
+  },
 
-    {
-        path:'**',
-        redirectTo:'home'
-    },
-    {
-        path:'details',
-        component:DetailsComponent
-    },
-    
+  // {
+  //     path:'**',
+  //     redirectTo:'home'
+  // },
+  {
+    path: 'details/:id',
+    component: DetailsComponent,
+  },
 ];
