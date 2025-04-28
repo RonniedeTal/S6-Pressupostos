@@ -1,0 +1,40 @@
+<div class="custom-card card mt-5 mx-auto shadow p-4 mb-4 bg-body rounded">
+  <form [formGroup]="formInput" (ngSubmit)="addUser()">
+    <h4>Ask Budget</h4>
+    <div class="d-flex align-items-center gap-2 flex-wrap">
+      <div class="d-flex flex-column">
+        <input
+          type="text"
+          id="name"
+          formControlName="name"
+          class="form-control-sm"
+          placeholder="Name"
+        />
+      </div>
+
+      <div class="d-flex flex-column">
+        <input
+          type="text"
+          id="telephone"
+          formControlName="telephone"
+          class="form-control-sm"
+          placeholder="Telephone"
+        />
+      </div>
+
+      <div class="d-flex flex-column">
+        <input
+          type="text"
+          id="email"
+          formControlName="email"
+          class="form-control-sm"
+          placeholder="Email"
+        />
+      </div>
+
+      <div class="d-flex flex-column">
+        <button type="submit" class="btn btn-success">Add Budget -></button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
-import { CardComponent } from "../../components/card/card.component";
-import { CardSectionComponent } from "../../section/card-section/card-section.component";
-import { HeaderComponent } from "../../components/header/header.component";
+
+import { CardSectionComponent } from '../../section/card-section/card-section.component';
+import { HeaderComponent } from '../../components/header/header.component';
+import { BudgetSectionComponent } from '../../section/budget-section/budget-section.component';
 
 @Component({
   selector: 'app-home',
-  imports: [CardComponent, CardSectionComponent, HeaderComponent],
+  imports: [CardSectionComponent, HeaderComponent, BudgetSectionComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
 })
-export class HomeComponent {
-
-}
+export class HomeComponent {}
