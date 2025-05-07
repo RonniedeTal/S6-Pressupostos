@@ -1,25 +1,39 @@
 <div class="custom-card card mt-5 mx-auto shadow p-4 mb-4 bg-body rounded">
-  <form [formGroup]="formInput" (ngSubmit)="addUser()">
+  <form [formGroup]="formInput" (ngSubmit)="addUser() ">
     <h4>Ask Budget</h4>
     <div class="d-flex align-items-center gap-2 flex-wrap">
       <div class="d-flex flex-column">
         <input
+       
           type="text"
           id="name"
           formControlName="name"
           class="form-control-sm"
           placeholder="Name"
+         minlength="3"
+         
+
         />
+        @if(formInput.get("name")?.invalid && formInput.get("name")?.touched){
+          This field is required
+        }
+        
+        
       </div>
 
       <div class="d-flex flex-column">
-        <input
+        <input 
           type="text"
           id="telephone"
           formControlName="telephone"
           class="form-control-sm"
           placeholder="Telephone"
+          minlength="9"
+          maxlength="9"
         />
+        @if(formInput.get("telephone")?.invalid && formInput.get("telephone")?.touched){
+          This field is required use only numbers
+        }
       </div>
 
       <div class="d-flex flex-column">
@@ -30,6 +44,9 @@
           class="form-control-sm"
           placeholder="Email"
         />
+        @if(formInput.get("email")?.invalid && formInput.get("email")?.touched){
+          Use a valid email
+        }
       </div>
 
       <div class="d-flex flex-column">
