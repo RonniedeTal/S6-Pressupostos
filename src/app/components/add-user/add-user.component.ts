@@ -3,7 +3,7 @@ import {
   ReactiveFormsModule,
   FormBuilder,
   FormGroup,
-  Validators,
+  Validators
 } from '@angular/forms';
 import { UserService } from '../../services/user.service';
 import { BudgetService } from '../../services/budget.service';
@@ -24,14 +24,25 @@ export class AddUserComponent {
   budgetService = inject(BudgetService);
 
   formInput: FormGroup = this.fb.nonNullable.group({
-    name: ['', Validators.required],
-    telephone: ['', Validators.required],
-    email: ['', [Validators.required]],
+    name: ['', [Validators.required, Validators.minLength(3)]],
+    telephone: ['', [Validators.required, Validators.minLength(9), Validators.maxLength(9), Validators.pattern("^[0-9]{9}$")]],
+    email: ['', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
     budget: [0],
     service: [[]],
+
   });
 
+  inputInvalid():any{
+    if(this.formInput.invalid){
+      this.formInput.markAllAsTouched()
+      return false
+    }
+  }
+
   addUser() {
+    if(this.formInput.invalid)return
+    console.log(this.formInput);
+    
     const user = this.formInput.getRawValue();
     user.budget = this.getServiceValue();
 
